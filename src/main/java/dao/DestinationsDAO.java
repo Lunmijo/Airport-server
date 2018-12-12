@@ -2,11 +2,14 @@ package dao;
 
 import Entity.DestinationsEntity;
 
+import java.util.List;
+
 public interface DestinationsDAO {
 
-    public DestinationsEntity findByID(int id);
-    public  DestinationsEntity findByCity(String city);
-    public void save(DestinationsEntity destination);
-    public void update(DestinationsEntity destination);
-    public void delete(DestinationsEntity destination);
+    DestinationsEntity findByID(int id);
+    DestinationsEntity findByCity(String city);
+    void save(DestinationsEntity destination);
+    void update(DestinationsEntity destination);
+    void delete(DestinationsEntity destination);
+    List<DestinationsEntity> findAll();
 }

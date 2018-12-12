@@ -2,13 +2,17 @@ package dao;
 
 import Entity.FlightsEntity;
 
+import java.util.List;
+
 public interface FlightsDAO {
-    public FlightsEntity findByID(int id);
-    public  FlightsEntity findByDepature(String city);
-    public  FlightsEntity findByDestination(String city);
-    public  FlightsEntity findByDateTimeFrom(String time);
-    public  FlightsEntity findByDateTimeArrive(String time);
-    public void save(FlightsEntity flight);
-    public void update(FlightsEntity flight);
-    public void delete(FlightsEntity flight);
+    FlightsEntity findByID(int id);
+    FlightsEntity findByDepature(String city);
+    FlightsEntity findByDestination(String city);
+    FlightsEntity findByDateTimeFrom(String time);
+    FlightsEntity findByDateTimeArrive(String time);
+    void save(FlightsEntity flight);
+    void update(FlightsEntity flight);
+    void delete(FlightsEntity flight);
+    List<FlightsEntity> findAll();
+
 }

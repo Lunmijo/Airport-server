@@ -1,13 +1,17 @@
 package dao;
 
+import Entity.FlightsEntity;
 import Entity.TicketEntity;
 
+import java.util.List;
+
 public interface TicketsDAO {
-    public TicketEntity findByID(int id);
-    public  TicketEntity findByUserID(int userID);
-    public  TicketEntity findByPrice(float price);
-    public  TicketEntity findByFlightID(int flightID);
-    public void save(TicketEntity flight);
-    public void update(TicketEntity flight);
-    public void delete(TicketEntity flight);
+    TicketEntity findByID(int id);
+    TicketEntity findByUserID(int userID);
+    TicketEntity findByPrice(float price);
+    TicketEntity findByFlightID(int flightID);
+    void save(TicketEntity flight);
+    void update(TicketEntity flight);
+    void delete(TicketEntity flight);
+    List<TicketEntity> findAll();
 }

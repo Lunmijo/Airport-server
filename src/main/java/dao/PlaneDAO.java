@@ -2,12 +2,15 @@ package dao;
 
 import Entity.PlaneEntity;
 
+import java.util.List;
+
 public interface PlaneDAO {
-    public PlaneEntity findByID(int id);
-    public  PlaneEntity findByName(String name);
-    public  PlaneEntity findByAvaliableFreeSeats(int seatsNumber);
-    public  PlaneEntity findByAvaliable();
-    public void save(PlaneEntity plane);
-    public void update(PlaneEntity plane);
-    public void delete(PlaneEntity plane);
+    PlaneEntity findByID(int id);
+    PlaneEntity findByName(String name);
+    PlaneEntity findByAvaliableFreeSeats(int seatsNumber);
+    PlaneEntity findByAvaliable();
+    void save(PlaneEntity plane);
+    void update(PlaneEntity plane);
+    void delete(PlaneEntity plane);
+    List<PlaneEntity> findAll();
 }
